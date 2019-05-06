@@ -6,17 +6,12 @@ Use [Apollo Client](https://github.com/apollographql/apollo-client) as React
 
 # Installation
 
-`npm install r@deboxsoft/graphql-client`
+`npm install @deboxsoft/graphql-client`
 
 `pnpm add @deboxsoft/graphql-client`
 
 `yarn add @deboxsoft/graphql-client`
 
-
-# Example
-
-<https://codesandbox.io/s/8819w85jn9> is a port of Pupstagram sample app to
-react-apollo-hooks.
 
 # API
 
@@ -291,11 +286,6 @@ const MyComponent = () => {
   // now you have access to the Apollo client
 };
 ```
-
-# Testing
-
-An example showing how to test components using react-apollo-hooks:
-<https://github.com/trojanowski/react-apollo-hooks-sample-test>
 
 # Server-side rendering
 
