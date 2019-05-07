@@ -18,6 +18,7 @@
     "check": "npm run lint && tsc --noEmit",
     "lint": "npm run eslint --fix",
     "prepublishOnly": "npm run build",
+    "release": "standard-version",
     "test": "cross-env NODE_ENV=test jest src"
   },
   "author": "Nurdiansyah",
