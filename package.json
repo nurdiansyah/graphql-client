@@ -16,7 +16,7 @@
     "build:es": "rimraf es && cross-env ES_MODULES=true && babel -x '.ts','.tsx' --ignore '**/__tests__/**' -d './es' './src'",
     "build:typings": "tsc -p tsconfig.typings.json",
     "check": "npm run lint && tsc --noEmit",
-    "lint": "npm run eslint --fix",
+    "lint": "eslint --fix './src/**/*.{ts,tsx}'",
     "prepublishOnly": "npm run build",
     "release": "standard-version",
     "test": "cross-env NODE_ENV=test jest src"
@@ -77,7 +77,7 @@
     "prettier": "^1.15.2",
     "react": "16.8.1",
     "react-dom": "16.8.1",
-    "react-testing-library": "^5.5.3",
+    "react-testing-library": "^7.0.0",
     "standard-version": "^4.4.0",
     "typescript": "~3.3.0"
   }

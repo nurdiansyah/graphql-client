@@ -14,7 +14,7 @@ devDependencies:
   '@types/react': 16.8.16
   '@types/react-dom': 16.8.4
   apollo-cache-inmemory: 1.5.1
-  apollo-client: 2.6.0-beta.8
+  apollo-client: 2.6.0-rc.1
   apollo-link: 1.2.11
   apollo-link-mock: 1.0.1
   graphql: 14.2.1
@@ -27,7 +27,7 @@ devDependencies:
   prettier: 1.17.0
   react: 16.8.1
   react-dom: 16.8.1
-  react-testing-library: 5.9.0
+  react-testing-library: 7.0.0
   standard-version: 4.4.0
   typescript: 3.3.4000
 lockfileVersion: 5
@@ -952,7 +952,7 @@ packages:
     dependencies:
       '@babel/preset-react': 7.0.0
       autoprefixer: 7.2.6
-      jest-dom: 3.1.4
+      jest-dom: 3.2.0
       jsdom: 11.12.0
       json5: 0.5.1
       raf: 3.4.1
@@ -1501,19 +1501,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-nzFmep/oKlbzUuDyz6fS6aYhRmfpcHWqNkkA9Bbxwk18RD6LXC4eZkuE0gXRX0IibVBHNjYVK+Szi0Yied4SpQ==
-  /apollo-cache/1.3.0-beta.6:
+  /apollo-cache/1.3.0-rc.1:
     dependencies:
-      apollo-utilities: 1.3.0-beta.6
+      apollo-utilities: 1.3.0-rc.1
       tslib: 1.9.3
     dev: true
     resolution:
-      integrity: sha512-R1fuHgec8Atvcf2FFkbS/H0A3O2EWnSVmeLsyR4wAaRc4A9L9+Bagx/ml1AYPtn1mnLNwMOH7/+VI+6SRK7Kiw==
-  /apollo-client/2.6.0-beta.8:
+      integrity: sha512-O15lk0ooIc8gDyFIDJdgvkQThS7TTq2D1tRdx3EM2iYcFTaTHqiAs95rGtsAaSxbDdrVrjfcboRhHo/iZ4vj2w==
+  /apollo-client/2.6.0-rc.1:
     dependencies:
       '@types/zen-observable': 0.8.0
-      apollo-cache: 1.3.0-beta.6
+      apollo-cache: 1.3.0-rc.1
       apollo-link: 1.2.11
-      apollo-utilities: 1.3.0-beta.6
+      apollo-utilities: 1.3.0-rc.1
       symbol-observable: 1.2.0
       ts-invariant: 0.4.1
       tslib: 1.9.3
@@ -1522,7 +1522,7 @@ packages:
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-b3zQeILexmqZg5cjM7KCA/qfb4CnItsuQEHh4lFae1XVjO/sjZN+G3/S05OsmrM7zgE+8nLFerA328s0hlVigw==
+      integrity: sha512-Cf+Vw34Cip0vGFE8+KbXyG8Z3UDJ5aKzLzBtpyozt6a9gmmmv9fzHd/X8/q3HpVE1FjjrlBKB4oUs36bibeFyQ==
   /apollo-link-mock/1.0.1:
     dependencies:
       apollo-link: 1.2.11
@@ -1552,7 +1552,7 @@ packages:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
       integrity: sha512-Zv8Udp9XTSFiN8oyXOjf6PMHepD4yxxReLsl6dPUy5Ths7jti3nmlBzZUOxuTWRwZn0MoclqL7RQ5UEJN8MAxg==
-  /apollo-utilities/1.3.0-beta.6:
+  /apollo-utilities/1.3.0-rc.1:
     dependencies:
       fast-json-stable-stringify: 2.0.0
       ts-invariant: 0.4.1
@@ -1561,7 +1561,7 @@ packages:
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
     resolution:
-      integrity: sha512-FeFFR2K3Tp0Wf5yCzRCNl8CP52vWLXh2nH7S3KFgYkxD8Jl88kfLFUAsGRJWfVsIiDTgooLHSGNP5Z4aiBlmIg==
+      integrity: sha512-F3WR18hRl5JjSHU7L3WNv38rl4np/d1dhSoUTFvZgF7jIouXBQIXEW1XjpOyXLbdFv4GtHxMLfGWBm9SfDwnkA==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -2660,7 +2660,7 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==
-  /dom-testing-library/3.19.4:
+  /dom-testing-library/4.0.1:
     dependencies:
       '@babel/runtime': 7.4.4
       '@sheerun/mutationobserver-shim': 0.3.2
@@ -2670,7 +2670,7 @@ packages:
     engines:
       node: '>=8'
     resolution:
-      integrity: sha512-GJOx8CLpnkvM3takILOsld/itUUc9+7Qh6caN1Spj6+9jIgNPY36fsvoH7sEgYokC0lBRdttO7G7fIFYCXlmcA==
+      integrity: sha512-Yr0yWlpI2QdTDEgPEk0TEekwP4VyZlJpl9E7nKP2FCKni44cb1jzjsy9KX6hBDsNA7EVlPpq9DHzO2eoEaqDZg==
   /domexception/1.0.1:
     dependencies:
       webidl-conversions: 4.0.2
@@ -4257,11 +4257,12 @@ packages:
       npm: '> 3'
     resolution:
       integrity: sha512-jE1LRnP/wVGdQy6sVJ+dPwMq6rXXuvYTnzWEb8hDwfxhQesoaaukJzZaZYi14JPpdmhrncdpUsZpagN7HjuTsw==
-  /jest-dom/3.1.4:
+  /jest-dom/3.2.0:
     dependencies:
       chalk: 2.4.2
       css: 2.2.4
       css.escape: 1.5.1
+      expect: 24.8.0
       jest-diff: 24.8.0
       jest-matcher-utils: 24.8.0
       lodash: 4.17.11
@@ -4272,7 +4273,7 @@ packages:
       node: '> 4'
       npm: '> 3'
     resolution:
-      integrity: sha512-ruIRHoRVnqPRt/HSS2aFukfhTpjEoq1I6PkYptKK5U2EeRm1eeOXG7BFiaMncTaGu4COSoCF84oLHj02+J5VDg==
+      integrity: sha512-KHxcgFBGsb37OV5u+dv1ZoNgX5Mu1VlFk6tP99w/30bsd7bDG2QtWQvxU6bB/mEIyt8gv2tJEJOVu2E0HJfkLQ==
   /jest-each/24.8.0:
     dependencies:
       '@jest/types': 24.8.0
@@ -5971,10 +5972,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
-  /react-testing-library/5.9.0:
+  /react-testing-library/7.0.0:
     dependencies:
       '@babel/runtime': 7.4.4
-      dom-testing-library: 3.19.4
+      dom-testing-library: 4.0.1
     dev: true
     engines:
       node: '>=8'
@@ -5982,7 +5983,7 @@ packages:
       react: '*'
       react-dom: '*'
     resolution:
-      integrity: sha512-T303PJZvrLKeeiPpjmMD1wxVpzEg9yI0qteH/cUvpFqNHOzPe3yN+Pu+jo9JlxuTMvVGPAmCAcgZ3sEtEDpJUQ==
+      integrity: sha512-8SHqwG+uhN9VhAgNVkVa3f7VjTw/L5CIaoAxKmy+EZuDQ6O+VsfcpRAyUw3MDL1h8S/gGrEiazmHBVL/uXsftA==
   /react/16.8.1:
     dependencies:
       loose-envify: 1.4.0
@@ -7435,6 +7436,6 @@ specifiers:
   prettier: ^1.15.2
   react: 16.8.1
   react-dom: 16.8.1
-  react-testing-library: ^5.5.3
+  react-testing-library: ^7.0.0
   standard-version: ^4.4.0
   typescript: ~3.3.0

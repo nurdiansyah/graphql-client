@@ -1,10 +1,10 @@
 
 {
     "extends": "./tsconfig.json",
-    "exclude": ["**/__tests__/**", "__testutils__/**"],
+    "exclude": ["**/__tests__/**"],
     "compilerOptions": {
       "declaration": true,
-      "declarationDir": "lib",
+      "declarationDir": "libs",
       "emitDeclarationOnly": true
     }
   }
