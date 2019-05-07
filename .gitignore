@@ -1,5 +1,7 @@
 /es
 /node_modules
-/lib
+/libs
 npm-debug.log*
 yarn-error.log*
+pnpm-error.log*
+.idea

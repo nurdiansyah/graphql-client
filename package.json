@@ -3,41 +3,28 @@
   "version": "0.4.5",
   "description": "",
   "sideEffects": false,
-  "main": "lib/index.js",
+  "main": "libs/index.js",
   "module": "es/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "es",
-    "lib"
+    "libs"
   ],
   "scripts": {
-    "lint": "npm run eslint --fix",
-    "check": "npm run lint && tsc --noEmit",
-    "clean": "rimraf libs",
-    "build": "npm run clean && tsc && cpx package.json ./libs",
+    "build": "npm run build:cjs && npm run build:es && npm run build:typings",
+    "build:cjs": "rimraf libs && babel -x '.ts','.tsx' --ignore '**/__tests__/**' -d './libs' './src'",
+    "build:es": "rimraf es && cross-env ES_MODULES=true && babel -x '.ts','.tsx' --ignore '**/__tests__/**' -d './es' './src'",
     "build:typings": "tsc -p tsconfig.typings.json",
-    "build:dev": "npm run clean && tsc --watch",
-    "publish:package": "npm run build && cd libs && npm publish --access public",
-    "test": "cross-env NODE_ENV=test jest src",
-    "test:watch": "npm run test --watch",
-    "test:coverage": "npm run test --coverage"
+    "check": "npm run lint && tsc --noEmit",
+    "lint": "npm run eslint --fix",
+    "prepublishOnly": "npm run build",
+    "test": "cross-env NODE_ENV=test jest src"
   },
   "author": "Nurdiansyah",
   "homepage": "https://github.com/nurdiansyah/graphql-client#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/nurdiansyah/graphql-client.git"
-  },
-  "jest": {
-    "preset": "@deboxsoft/devel-react",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx",
-      "node"
-    ]
   },
   "husky": {
     "hooks": {
@@ -50,8 +37,7 @@
       "git add"
     ],
     "**/*.{ts,tsx}": [
-      "tslint --fix --project .",
-      "prettier --write",
+      "npm run lint",
       "git add"
     ]
   },
