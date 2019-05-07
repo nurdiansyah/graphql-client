@@ -445,7 +445,7 @@ it("shouldn't allow a query with non-standard fetch policy with suspense", async
   const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation(noop);
 
   expect(() =>
-    render(<TasksWrapper client={client} query={TASKS_QUERY} suspend fetchPolicy="cache-and-network" />)
+    render(<TasksWrapper client={client} query={TASKS_QUERY} suspend fetchPolicy="cache-first" />)
   ).toThrowErrorMatchingInlineSnapshot(
     `"Fetch policy cache-and-network is not supported without 'suspend: false'"`
   );
@@ -458,7 +458,7 @@ it("shouldn't allow a query with non-standard fetch policy with suspense", async
 it('should allow a query with non-standard fetch policy without suspense', async () => {
   const client = createMockClient();
   const { container } = render(
-    <TasksWrapper client={client} suspend={false} query={TASKS_QUERY} fetchPolicy="cache-and-network" />
+    <TasksWrapper client={client} suspend={false} query={TASKS_QUERY} fetchPolicy="cache-first" />
   );
 
   expect(container).toMatchInlineSnapshot(`

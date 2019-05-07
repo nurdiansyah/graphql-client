@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import ApolloClient from 'apollo-client';
 import { ApolloLink } from 'apollo-link';
 import { MockedResponse } from 'apollo-link-mock';

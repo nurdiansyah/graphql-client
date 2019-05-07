@@ -77,7 +77,7 @@ export function useQuery<TData = any, TVariables = OperationVariables, TCache = 
   const fetchPolicy =
     ssrInUse &&
     // Taken from https://github.com/apollographql/react-apollo/blob/2d7e48b7d0c26e792e1ed26e98bb84d8fba5bb8a/src/Query.tsx#L167-L169
-    (actualCachePolicy === 'network-only' || actualCachePolicy === 'cache-and-network')
+    (actualCachePolicy === 'network-only' || actualCachePolicy === 'cache-first')
       ? 'cache-first'
       : actualCachePolicy;
 

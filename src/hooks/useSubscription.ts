@@ -59,7 +59,7 @@ export function useSubscription<TData = any, TVariables = OperationVariables, TC
         query
       })
       .subscribe(
-        nextResult => {
+        (nextResult: { data?: any }) => {
           const newResult = {
             data: nextResult.data,
             error: undefined,
@@ -73,7 +73,7 @@ export function useSubscription<TData = any, TVariables = OperationVariables, TC
             });
           }
         },
-        error => {
+        (error: any) => {
           setResult({ loading: false, data: result.data, error });
         }
       );

@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import ApolloClient from 'apollo-client';
 import { DocumentNode } from 'apollo-link';
 import { MockedResponse } from 'apollo-link-mock';
@@ -143,7 +144,7 @@ describe.each([[true], [false]])('getMarkupFromTree with "suspend: %s"', suspend
     await expect(
       getMarkupFromTree({
         renderFunction: renderToString,
-        tree: <UserDetailsWrapper client={client} suspend={suspend} fetchPolicy="cache-and-network" />
+        tree: <UserDetailsWrapper client={client} suspend={suspend} fetchPolicy="cache-first" />
       })
     ).resolves.toMatchInlineSnapshot(`"James"`);
   });
@@ -155,7 +156,7 @@ describe.each([[true], [false]])('getMarkupFromTree with "suspend: %s"', suspend
       <div>
         <span>Hi</span>
         <div>
-          <UserDetailsWrapper client={client} suspend={suspend} fetchPolicy="cache-and-network" />
+          <UserDetailsWrapper client={client} suspend={suspend} fetchPolicy="cache-first" />
         </div>
       </div>
     );
@@ -316,7 +317,7 @@ Object {
 
 it('runs onBeforeRender', async () => {
   const client = createMockClient();
-  const context: { headTags: Array<ReactElement<object>> } = { headTags: [] };
+  const context: { headTags: ReactElement<object>[] } = { headTags: [] };
   const Context = createContext(context);
 
   function Title(props: HTMLAttributes<HTMLTitleElement>) {
